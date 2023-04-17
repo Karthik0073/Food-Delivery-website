@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Payment Gateway</title>
+    <style>
+        body {
+            /*border: 1px solid burlywood;*/
+            background-color:whitesmoke;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        div{
+            padding: 10px;
+            margin: 20px;
+            font-size: 25px;
+    
+
+        }
+        h2{
+            margin: 30px;
+            
+        }
+        button{
+            margin: 30px;
+            padding: 10px;
+            border: 0.5px solid black;
+            color: blueviolet;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PAYMENT</h1>
+    <form>
+        <h2> PLEASE CHOOSE YOUR PAYMENT OPTIONS</h2>
+        <div >
+            <input type="radio" id="COD" name="payment" />
+            <label for="COD">CASH-ON-DELIVERY</label>
+        </div>
+        <div>
+            <input type="radio" id="CCARD"  name="payment"/>
+            <label for="CCARD">CREDIT-CARD</label>
+        </div>
+        <div>
+            <input type="radio" ID="DCARD" name="payment" />
+            <label for="DCARD">DEBIT-CARD</label>
+        </div>
+        <div>
+            <input type="radio" id="PHONEPAY" name="payment" />
+            <label for="PHONEPAY">UPI</label>
+        </div>
+
+    </form>
+    <button>CHECK-OUT</button>
+    
+</body>
+
+</html>

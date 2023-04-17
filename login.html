@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Food Hunter Login</title>
+<style>
+.formset{
+    top:50px;
+}
+.register:hover{
+    color:red;
+    transition: 0.1s;
+    cursor:pointer;
+}
+.truck{
+    position:absolute;
+    width:250px;
+    top:20px;
+    right:50px;
+}
+body{
+background-image: linear-gradient(to right, rgb(131, 131, 24) , rgb(208, 151, 60));
+}
+ul {list-style-type:none;}
+#heading{
+text-decoration:underline;
+font-style: italic;
+color:black;
+text-align:center;
+}
+#para{
+font-size:20px;
+font-style: italic;
+color:blue;
+text-align:center;
+}
+</style>
+
+</head>
+<body>
+<script>
+function Login()
+{
+let N=document.getElementById("Name");
+let P=document.getElementById("password");
+
+if(N.value.length==0)
+{
+alert("please enter ur name");
+N.focus();
+return ;
+}
+
+if(P.value.length==0)
+{
+alert("Password can not be empty");
+E.focus();
+return;
+}
+window.location.href = "/";
+}
+function registeropen(){
+    window.location.href = "/register";
+}
+</script>
+<form style="font-size:20px;" class="formset" >
+<fieldset>
+<legend> Food Hunter </legend>
+<h1 id="heading"> Sign Up </h1>
+<div cellpadding="2" width="20%" align="left"
+cellspacing="2">
+<ul>
+<li>
+User Name:<input type="text" id="Name" size="30"><br><br>
+</li>
+<li>
+Password:<input type="password" id="password" size="30"><br><br>
+</li>
+
+
+<br><br>
+
+<li>
+<input type="button" id="submit" onclick="Login()" value="LOGIN"
+style="height:50px" >
+<br>
+<p class="register" onclick="registeropen()">Not registered? resgister now</p>
+</li>
+</ul>
+</div>
+</fieldset>
+</form>
+<div>
+    <img class=truck src=foodhunter.png>
+</div>
+</body>
+</html>

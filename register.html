@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>Food Hunter Resgistration</title>
+<style>
+.truck{
+    position:absolute;
+    width:250px;
+    top:20px;
+    right:50px;
+}
+body{
+background-image: linear-gradient(to right, rgb(131, 131, 24) , rgb(208, 151, 60));
+}
+ul {list-style-type:none;}
+#heading{
+text-decoration:underline;
+font-style: italic;
+color:black;
+text-align:center;
+}
+#para{
+font-size:20px;
+font-style: italic;
+color:blue;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<script>
+function validate()
+{
+let N=document.getElementById("Name");
+let E=document.getElementById("email");
+let P=document.getElementById("phone");
+let A=document.getElementById("address");
+let email=/[a-z][a-z0-9_]+@[a-z]+\.[a-z]+/;
+let phone = /[0-9]{10}/;
+
+if(N.value.length==0)
+{
+alert("please enter ur name");
+N.focus();
+return ;
+}
+
+if(E.value.length==0)
+{
+alert("Email ID cannot be empty");
+E.focus();
+return;
+}
+else
+{
+if(!E.value.match(email))
+{
+alert("invalid emailid");
+E.focus();
+return;
+}
+}
+if(P.value.length==0)
+{
+alert("phone no can not be empty");
+P.focus();
+return;
+}
+else
+{
+if(!P.value.match(phone))
+{
+alert("invalid phone no");
+P.focus();
+return;
+}
+}
+if(A.value.length==0)
+{
+alert("please enter address");
+A.focus();
+return ;
+}
+
+alert("Registered Successfully");
+window.location.href="/login";
+}
+</script>
+<form style="font-size:20px;">
+<fieldset>
+<legend> Food Hunter </legend>
+<h1 id="heading"> Details </h1>
+<div cellpadding="2" width="20%" align="left"
+cellspacing="2">
+<ul>
+<li>
+Name:<input type="text" id="Name" size="30"><br><br>
+</li>
+<li>
+Email ID:<input type="email" id="email" size="30"><br><br>
+</li>
+<li>
+Phone no:<input type="tel" id="phone" size="30"><br><br>
+</li>
+<li>
+Enter Address:<br>
+<textarea rows="10" cols="50" id="address" size="30"></textarea><br><br>
+</li>
+
+<br><br>
+
+<li>
+<input type="button" id="submit" onclick="validate()" value="Submit the Information"
+style="height:50px" >
+</li>
+</ul>
+</div>
+</fieldset>
+</form>
+<div>
+    <img class=truck src=foodhunter.png>
+</div>
+</body>
+</html>
